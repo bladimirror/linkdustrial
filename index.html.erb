@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" media="screen">
+  
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="Content-Type">
+    <title> Test </title>
+
+	  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!--CSS W3 SCHOOLS-->
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <!-- CSS File-->
+    <link rel="stylesheet", href="/assets/dashboard.scss">
+    <!--GOOGLE FONTS CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+
+
+	<body>
+    <div id="container">
+      <ul class="nav nav-tabs navbar-fixed-top">
+        <li role="presentation" class="active"><a href="#">Dashboard</a></li>
+        <li role="presentation" class="active"><a href="#">Account Settings</a></li>
+        <li role="presentation" class="active"><a href="#">Admin</a></li>
+      </ul>
+      <div class="sidebar">
+        <form class="form-group-item" action='/dash_web'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" value="dash_web">
+          <input class="list-group-item" type='submit' value="Web Fundamentals" />
+        </form>
+        <form class="form-group-item" action='/dash_python'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" value="dash_python">
+          <input class="list-group-item" type='submit' value="Python" />
+        </form>
+        <form class="form-group-item" action='/dash_ror'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" value="dash_ror">
+          <input class="list-group-item" type='submit' value="Ruby on Rails" />
+        </form>
+        <form class="form-group-item" action='/dash_mean'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" value="dash_mean">
+          <input class="list-group-item" type='submit' value="Mean" />
+        </form>
+        <form class="form-group-item" action='/dash_ios'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" value="dash_ios">
+          <input class="list-group-item" type='submit' value="iOS" />
+        </form>
+        <form class="form-group-item" action='/dash_job'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" value="dash_job">
+          <input class="list-group-item" type='submit' value="Job Hunting" />
+        </form>
+      </div>
+      <div class="soup_content">
+        <div class="w3-container">
+          <%= render(:partial => "dash_web") %>
+          <%= render(:partial => "dash_ios") %>
+          <%= render(:partial => "dash_job") %>
+          <%= render(:partial => "dash_mean") %>
+          <%= render(:partial => "dash_python") %>
+          <%= render(:partial => "dash_ror") %>
+        </div>    
+    </div>
+	</body>
+</html>
+
+
+
