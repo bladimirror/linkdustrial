@@ -52703,3 +52703,126 @@ Completed 200 OK in 49ms (Views: 48.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:37:52 -0700
+
+
+Started GET "/" for ::1 at 2017-05-10 06:11:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#index as HTML
+  Rendered dashboard/_dash_web.html.erb (0.8ms)
+  Rendered dashboard/_dash_ios.html.erb (1.9ms)
+  Rendered dashboard/_dash_job.html.erb (2.1ms)
+  Rendered dashboard/_dash_mean.html.erb (1.4ms)
+  Rendered dashboard/_dash_python.html.erb (1.2ms)
+  Rendered dashboard/_dash_ror.html.erb (1.1ms)
+  Rendered dashboard/_dash_links.html.erb (0.7ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.6ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.6ms)
+  Rendered dashboard/_dash_admin.html.erb (0.6ms)
+  Rendered dashboard/index.html.erb within layouts/application (322.6ms)
+Completed 200 OK in 422ms (Views: 415.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-06f3a8a3653de74d37a617c4faf15b36eeb817e68e9e7491b3dfd066d277dd12.css?body=1" for ::1 at 2017-05-10 06:11:15 -0700
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 06:11:15 -0700
+
+
+Started GET "/dash_web?authenticity_token=6jnFt8QnG9rPSGrK81iaeHF5zDRTRCoYE8SesdCSaQKXdfUGCQVA%2F3lAEfhDuo9QHf3BOaptsU%2Bd%2FU%2Bg1WptvQ%3D%3D" for ::1 at 2017-05-10 06:11:17 -0700
+Processing by DashboardController#web_fundamentals as HTML
+  Parameters: {"authenticity_token"=>"6jnFt8QnG9rPSGrK81iaeHF5zDRTRCoYE8SesdCSaQKXdfUGCQVA/3lAEfhDuo9QHf3BOaptsU+d/U+g1WptvQ=="}
+  Rendered dashboard/_dash_web.html.erb (4.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.1ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.1ms)
+  Rendered dashboard/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 06:11:17 -0700
+
+
+Started GET "/dash_python?authenticity_token=yrRJeqSkFDGOO0GvRrIx%2F4gp1m46tkHLWjbhDN2QKwC3%2BHnLaYZPFDgzOp32UCTX5K3bY8Of2pzUDzAd2Ggvvw%3D%3D" for ::1 at 2017-05-10 06:11:18 -0700
+Processing by DashboardController#python as HTML
+  Parameters: {"authenticity_token"=>"yrRJeqSkFDGOO0GvRrIx/4gp1m46tkHLWjbhDN2QKwC3+HnLaYZPFDgzOp32UCTX5K3bY8Of2pzUDzAd2Ggvvw=="}
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (5.7ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.1ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.1ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 06:11:19 -0700
+
+
+Started GET "/dash_ror?authenticity_token=t%2FJW1G2nS3eHZYvubcYdJ9giF5lbNoUZ3EvuXwWhihjKvmZloIUQUjFt8NzdJAgPtKYalKIfHk5Scj9OAFmOpw%3D%3D" for ::1 at 2017-05-10 06:11:20 -0700
+Processing by DashboardController#ror as HTML
+  Parameters: {"authenticity_token"=>"t/JW1G2nS3eHZYvubcYdJ9giF5lbNoUZ3EvuXwWhihjKvmZloIUQUjFt8NzdJAgPtKYalKIfHk5Scj9OAFmOpw=="}
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (16.4ms)
+  Rendered dashboard/_dash_links.html.erb (0.1ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.1ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.3ms)
+  Rendered dashboard/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 67ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 06:11:20 -0700
+
+
+Started GET "/dash_mean?authenticity_token=YDUZ72x20q3w7VgD1vrv%2BzMPs4VHp0ZXxNMwwyTbC4sdeSleoVSJiEblIzFmGPrTX4u%2BiL6O3QBK6uHSISMPNA%3D%3D" for ::1 at 2017-05-10 06:11:21 -0700
+Processing by DashboardController#mean as HTML
+  Parameters: {"authenticity_token"=>"YDUZ72x20q3w7VgD1vrv+zMPs4VHp0ZXxNMwwyTbC4sdeSleoVSJiEblIzFmGPrTX4u+iL6O3QBK6uHSISMPNA=="}
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (9.2ms)
+  Rendered dashboard/_dash_python.html.erb (0.7ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.1ms)
+  Rendered dashboard/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 06:11:21 -0700
+
+
+Started GET "/dash_ios?authenticity_token=csQ4X0gFdqijUSqAKLj1zjvQ%2Bcx574icn5rdFteAp5IPiAjuhSctjRVZUbKYWuDmV1T0wYDGE8sRowwH0nijLQ%3D%3D" for ::1 at 2017-05-10 06:11:22 -0700
+Processing by DashboardController#ios as HTML
+  Parameters: {"authenticity_token"=>"csQ4X0gFdqijUSqAKLj1zjvQ+cx574icn5rdFteAp5IPiAjuhSctjRVZUbKYWuDmV1T0wYDGE8sRowwH0nijLQ=="}
+  Rendered dashboard/_dash_web.html.erb (0.1ms)
+  Rendered dashboard/_dash_ios.html.erb (6.2ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.1ms)
+  Rendered dashboard/_dash_python.html.erb (0.1ms)
+  Rendered dashboard/_dash_ror.html.erb (0.1ms)
+  Rendered dashboard/_dash_links.html.erb (0.1ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.1ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 06:11:22 -0700
