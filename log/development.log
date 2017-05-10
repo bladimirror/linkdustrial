@@ -51903,3 +51903,803 @@ PG::ConnectionBad (could not connect to server: No such file or directory
   Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (96.6ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 04:56:45 -0700
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.1ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.8ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (100.1ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 04:56:48 -0700
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.8ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.0ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.6ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 04:58:49 -0700
+
+ActiveRecord::NoDatabaseError (FATAL:  database "learning_platform_development" does not exist
+):
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:661:in `rescue in connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.5) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.5) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.5) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.0ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.9ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.2ms)
+
+
+Started GET "/" for ::1 at 2017-05-10 05:26:04 -0700
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Bladmirror/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.2ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.7ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (99.4ms)
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170503140617)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (4.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password" character varying, "admin_access" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20170503140617"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2017-05-10 05:28:47 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DashboardController#index as HTML
+  Rendered dashboard/_dash_web.html.erb (0.5ms)
+  Rendered dashboard/_dash_ios.html.erb (0.3ms)
+  Rendered dashboard/_dash_job.html.erb (0.4ms)
+  Rendered dashboard/_dash_mean.html.erb (0.3ms)
+  Rendered dashboard/_dash_python.html.erb (0.3ms)
+  Rendered dashboard/_dash_ror.html.erb (0.3ms)
+  Rendered dashboard/_dash_links.html.erb (0.3ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.3ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.3ms)
+  Rendered dashboard/_dash_admin.html.erb (0.3ms)
+  Rendered dashboard/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 621ms (Views: 612.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:28:48 -0700
+
+
+Started GET "/dash_web?authenticity_token=eLNzk1WEaU%2FWzdtsQIPfulq3MDXX8%2FRAlLXpqietTDEF%2F0MimKYyamDFoF7wYcqSNjM9OC7abxcajDi7IlVIjg%3D%3D" for ::1 at 2017-05-10 05:28:50 -0700
+Processing by DashboardController#web_fundamentals as HTML
+  Parameters: {"authenticity_token"=>"eLNzk1WEaU/WzdtsQIPfulq3MDXX8/RAlLXpqietTDEF/0MimKYyamDFoF7wYcqSNjM9OC7abxcajDi7IlVIjg=="}
+  Rendered dashboard/_dash_web.html.erb (5.6ms)
+  Rendered dashboard/_dash_ios.html.erb (0.1ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.1ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.1ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.1ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:28:50 -0700
+
+
+Started GET "/web_fundamentals_html?x=138&y=118" for ::1 at 2017-05-10 05:30:12 -0700
+Processing by WebFundamentalsController#html as HTML
+  Parameters: {"x"=>"138", "y"=>"118"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template web_fundamentals/html with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Bladmirror/Desktop/Coding/git_repo/learning_platform/app/views"
+):
+  app/controllers/web_fundamentals_controller.rb:3:in `html'
+
+
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (50.8ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Bladmirror/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.2ms)
+
+
+Started GET "/dash_web?authenticity_token=eLNzk1WEaU%2FWzdtsQIPfulq3MDXX8%2FRAlLXpqietTDEF%2F0MimKYyamDFoF7wYcqSNjM9OC7abxcajDi7IlVIjg%3D%3D" for ::1 at 2017-05-10 05:31:12 -0700
+Processing by DashboardController#web_fundamentals as HTML
+  Parameters: {"authenticity_token"=>"eLNzk1WEaU/WzdtsQIPfulq3MDXX8/RAlLXpqietTDEF/0MimKYyamDFoF7wYcqSNjM9OC7abxcajDi7IlVIjg=="}
+  Rendered dashboard/_dash_web.html.erb (7.2ms)
+  Rendered dashboard/_dash_ios.html.erb (0.1ms)
+  Rendered dashboard/_dash_job.html.erb (0.1ms)
+  Rendered dashboard/_dash_mean.html.erb (0.1ms)
+  Rendered dashboard/_dash_python.html.erb (0.1ms)
+  Rendered dashboard/_dash_ror.html.erb (0.1ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.1ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.1ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 88ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:31:12 -0700
+
+
+Started GET "/assets/dash_web_html-827f303d8ceb157fa8a9014766d13331416a053e6b65d08a5522cb3f292725b3.png" for ::1 at 2017-05-10 05:31:12 -0700
+
+
+Started GET "/dash_web?authenticity_token=eLNzk1WEaU%2FWzdtsQIPfulq3MDXX8%2FRAlLXpqietTDEF%2F0MimKYyamDFoF7wYcqSNjM9OC7abxcajDi7IlVIjg%3D%3D" for ::1 at 2017-05-10 05:31:44 -0700
+Processing by DashboardController#web_fundamentals as HTML
+  Parameters: {"authenticity_token"=>"eLNzk1WEaU/WzdtsQIPfulq3MDXX8/RAlLXpqietTDEF/0MimKYyamDFoF7wYcqSNjM9OC7abxcajDi7IlVIjg=="}
+  Rendered dashboard/_dash_web.html.erb (7.5ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.1ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 66ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:31:44 -0700
+
+
+Started GET "/assets/dash_web_css-b766394f6c7e54f32cd7149081dd4949fb6d360550c9b2068604dd89f8d7594c.png" for ::1 at 2017-05-10 05:31:44 -0700
+
+
+Started GET "/assets/dash_web_jquery-5692a7ca4d14ed738ad17b2ad890551f7424f4cc2dde8c5034ef875fb0733904.png" for ::1 at 2017-05-10 05:31:44 -0700
+
+
+Started GET "/assets/dash_web_github-5bd345b9792db3798976ea344b9a848b2fb84ecd98e64b404d5fd5aba0d044b8.png" for ::1 at 2017-05-10 05:31:44 -0700
+
+
+Started GET "/assets/dash_web_next_steps-5fa051d61664ebf38ce0a5ccf09a60791e692ca42e721fa45ec405fb4faff8ee.png" for ::1 at 2017-05-10 05:31:45 -0700
+
+
+Started GET "/assets/dash_web_wireframe-481a84839807759d0c37fabf2cf4a73cf8c6896edf473f30823c7094810ec19c.png" for ::1 at 2017-05-10 05:31:45 -0700
+
+
+Started GET "/assets/dash_web_rwd-60d6f01287a3ac77a53f1417acba76e97789a92ab72fd1c13c138251529a2cf9.png" for ::1 at 2017-05-10 05:31:45 -0700
+
+
+Started GET "/dash_python?authenticity_token=V9AMxEBkv3Z9Ga3JAtXBi%2BJU0AYC4IZZw%2FRCcfvFME4qnDx1jUbkU8sR1vuyN9SjjtDdC%2FvJHQ5NzZNg%2Fj008Q%3D%3D" for ::1 at 2017-05-10 05:31:49 -0700
+Processing by DashboardController#python as HTML
+  Parameters: {"authenticity_token"=>"V9AMxEBkv3Z9Ga3JAtXBi+JU0AYC4IZZw/RCcfvFME4qnDx1jUbkU8sR1vuyN9SjjtDdC/vJHQ5NzZNg/j008Q=="}
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:31:49 -0700
+
+
+Started GET "/assets/dash_python_mysql.png" for ::1 at 2017-05-10 05:31:49 -0700
+
+
+Started GET "/assets/dash_python_python.png" for ::1 at 2017-05-10 05:31:49 -0700
+
+
+Started GET "/assets/dash_python_oop.png" for ::1 at 2017-05-10 05:31:49 -0700
+
+
+Started GET "/assets/dash_python_ajax.png" for ::1 at 2017-05-10 05:31:49 -0700
+
+
+Started GET "/assets/dash_python_django.png" for ::1 at 2017-05-10 05:31:49 -0700
+
+
+Started GET "/assets/dash_deployment.png" for ::1 at 2017-05-10 05:31:49 -0700
+
+
+Started GET "/assets/dash_python_pylot.png" for ::1 at 2017-05-10 05:31:49 -0700
+
+
+Started GET "/assets/dash_python_flask.png" for ::1 at 2017-05-10 05:31:49 -0700
+
+
+Started GET "/assets/dash_algorithms.png" for ::1 at 2017-05-10 05:31:49 -0700
+
+
+Started GET "/dash_web?authenticity_token=N5hqWcEfGNwTLDMfhDJwhzmV8RQfeq%2BjU%2F59hq66GuBK1FroDD1D%2BaUkSC000GWvVRH8GeZTNPTdx6yXq0IeXw%3D%3D" for ::1 at 2017-05-10 05:31:51 -0700
+Processing by DashboardController#web_fundamentals as HTML
+  Parameters: {"authenticity_token"=>"N5hqWcEfGNwTLDMfhDJwhzmV8RQfeq+jU/59hq66GuBK1FroDD1D+aUkSC000GWvVRH8GeZTNPTdx6yXq0IeXw=="}
+  Rendered dashboard/_dash_web.html.erb (3.8ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.1ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:31:51 -0700
+
+
+Started GET "/dash_python?authenticity_token=fHK3smeCyyG8PPxLwXTwMtKHeHeMleXKzEOKHxw6ZlYBPocDqqCQBAo0h3lxluUavgN1enW8fp1CelsOGcJi6Q%3D%3D" for ::1 at 2017-05-10 05:37:28 -0700
+Processing by DashboardController#python as HTML
+  Parameters: {"authenticity_token"=>"fHK3smeCyyG8PPxLwXTwMtKHeHeMleXKzEOKHxw6ZlYBPocDqqCQBAo0h3lxluUavgN1enW8fp1CelsOGcJi6Q=="}
+  Rendered dashboard/_dash_web.html.erb (0.1ms)
+  Rendered dashboard/_dash_ios.html.erb (0.7ms)
+  Rendered dashboard/_dash_job.html.erb (0.7ms)
+  Rendered dashboard/_dash_mean.html.erb (0.5ms)
+  Rendered dashboard/_dash_python.html.erb (5.7ms)
+  Rendered dashboard/_dash_ror.html.erb (0.6ms)
+  Rendered dashboard/_dash_links.html.erb (0.4ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.6ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.5ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:37:28 -0700
+
+
+Started GET "/assets/dash_python_mysql-11abc6ec636c69fe7190fbfccfa7b1921ab8cb7516c821b3c726cf58c13819ea.png" for ::1 at 2017-05-10 05:37:28 -0700
+
+
+Started GET "/assets/dash_python_python-dd8c4f7ccd83ada7ae987dd97629515de3a6503e8f4c37b851180a42f1827e62.png" for ::1 at 2017-05-10 05:37:28 -0700
+
+
+Started GET "/assets/dash_python_oop-59b2402c1f309816cfd9ff206b2f0e0c80440b1cfb044c6fa2541b64e12c9f58.png" for ::1 at 2017-05-10 05:37:28 -0700
+
+
+Started GET "/assets/dash_python_flask-c6a73fc9c91fd506aa4b40eb4df75f96dbbc46fdc390c3536f064956702fef5e.png" for ::1 at 2017-05-10 05:37:28 -0700
+
+
+Started GET "/assets/dash_python_pylot-64171168582bb4a2ceb08de294dea8948ec7ce5027585a4b9fb80445ecdbad8e.png" for ::1 at 2017-05-10 05:37:28 -0700
+
+
+Started GET "/assets/dash_python_ajax-efe7f8fd7335de7ed26676021f6e0441b5e40532eedb94083a96b25c40c7681b.png" for ::1 at 2017-05-10 05:37:28 -0700
+
+
+Started GET "/assets/dash_python_django-c945d1376855e8949032fc974a27bceee3870a140883a92e973aab52f5354069.png" for ::1 at 2017-05-10 05:37:28 -0700
+
+
+Started GET "/assets/dash_deployment-7acce9896cbcd252eb776f418af0a8ff3f9ec70ab6f007820e74317b9c27474c.png" for ::1 at 2017-05-10 05:37:28 -0700
+
+
+Started GET "/assets/dash_algorithms-c16d93c4a9c0ef555ad41f40ff905ddcb0af2e2801cd6b10bdb6537ccee663fb.png" for ::1 at 2017-05-10 05:37:28 -0700
+
+
+Started GET "/dash_mean?authenticity_token=5RTfhtMNqavQElFNKPvVRWQecvG%2BC1S7TT%2BITpQPQEeYWO83Hi%2FyjmYaKn%2BYGcBtCJp%2F%2FEciz%2BzDBllfkfdE%2BA%3D%3D" for ::1 at 2017-05-10 05:37:30 -0700
+Processing by DashboardController#mean as HTML
+  Parameters: {"authenticity_token"=>"5RTfhtMNqavQElFNKPvVRWQecvG+C1S7TT+ITpQPQEeYWO83Hi/yjmYaKn+YGcBtCJp//Eciz+zDBllfkfdE+A=="}
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (5.5ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:37:31 -0700
+
+
+Started GET "/assets/dash_mean_javascript-ae842e73f08c62b5cf0e7c8eabf5d8e898bf2b06a8203916eb14324c3a2ba0ac.png" for ::1 at 2017-05-10 05:37:31 -0700
+
+
+Started GET "/assets/dash_mean_mongodb-82ec53cdc38fd3c530eebb2a97d0d9ff2657bc598ed620ce03c0fe76b2911026.png" for ::1 at 2017-05-10 05:37:31 -0700
+
+
+Started GET "/assets/dash_mean_express-3d6c7fa1f53b74392679f53138973dee6d2e14393621282aaf18ff6c418f9b8f.png" for ::1 at 2017-05-10 05:37:31 -0700
+
+
+Started GET "/assets/dash_mean_nodejs-4e3102a09d0972573b1e88a7678d33d03331086dd8934b868df62d9da05bfb67.png" for ::1 at 2017-05-10 05:37:31 -0700
+
+
+Started GET "/assets/dash_mean_angular-cb3351fa922c6b05d9f4b0c3af34ed4cc542b5f1b38088bd8b93273f90e8ce96.png" for ::1 at 2017-05-10 05:37:31 -0700
+
+
+Started GET "/assets/dash_mean_mean-6b6012965b9ebef7e61c318a4867a5e9899a21a6a61f681ef5b399d7108bbad1.png" for ::1 at 2017-05-10 05:37:31 -0700
+
+
+Started GET "/dash_ror?authenticity_token=RVDdL2JwJkJTbq9pggIXADPIdmyRM491uues%2F%2BYN9to4HO2er1J9Z%2BVm1Fsy4AIoX0x7YWgaFCI03n3u4%2FXyZQ%3D%3D" for ::1 at 2017-05-10 05:37:32 -0700
+Processing by DashboardController#ror as HTML
+  Parameters: {"authenticity_token"=>"RVDdL2JwJkJTbq9pggIXADPIdmyRM491uues/+YN9to4HO2er1J9Z+Vm1Fsy4AIoX0x7YWgaFCI03n3u4/XyZQ=="}
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.1ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (4.4ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:37:32 -0700
+
+
+Started GET "/assets/dash_ruby_ruby-ddc7b4ff57f5fdb94ae9cf218265cde09267364c52c6ab0de20f42c2748e200c.png" for ::1 at 2017-05-10 05:37:32 -0700
+
+
+Started GET "/assets/dash_ruby_tdd-c9e1af5f37843102c8b91dba555d5d5bb92f8ea9798af61a66a9c7e2d1843b61.png" for ::1 at 2017-05-10 05:37:32 -0700
+
+
+Started GET "/assets/dash_ruby_rails-f8ac06abf98824f98b8d60cd59beab5c3860c57034dfe84d2815409263c01a2d.png" for ::1 at 2017-05-10 05:37:32 -0700
+
+
+Started GET "/assets/dash_ruby_others-d3c8ffe4cd31f75032cea097ae7aa63b6f76056c02d0364b9ff0d2144889ab03.png" for ::1 at 2017-05-10 05:37:32 -0700
+
+
+Started GET "/assets/dash_ruby_ember-462ddac7d588f6c122943924db6528f48879c7b10c0f5ed9c4a1438685baed30.png" for ::1 at 2017-05-10 05:37:32 -0700
+
+
+Started GET "/dash_ios?authenticity_token=olfDh%2FfKgMYYsxk%2BZih9g%2FxdwtQ9KcdCBFHK0Ilz0mXfG%2FM2Oujb4667YgzWymirkNnP2cQAXBWKaBvBjIvW2g%3D%3D" for ::1 at 2017-05-10 05:37:35 -0700
+Processing by DashboardController#ios as HTML
+  Parameters: {"authenticity_token"=>"olfDh/fKgMYYsxk+Zih9g/xdwtQ9KcdCBFHK0Ilz0mXfG/M2Oujb4667YgzWymirkNnP2cQAXBWKaBvBjIvW2g=="}
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (6.9ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:37:35 -0700
+
+
+Started GET "/assets/dash_ios_swift-27db5469553c23a634cb21b9e224853880616ddabea112e8208ff31e90b2e9b5.png" for ::1 at 2017-05-10 05:37:35 -0700
+
+
+Started GET "/assets/dash_ios_active_record-2c4d2bd8fbed9b1dfe21b688de69fe543358644842bb79178a332f63f5b6f6a4.png" for ::1 at 2017-05-10 05:37:35 -0700
+
+
+Started GET "/assets/dash_ios_ios-e838cdbdeb01cbcd7572834db2e5358d3abc3cc37c80f5be8d6ab877e006e5bb.png" for ::1 at 2017-05-10 05:37:35 -0700
+
+
+Started GET "/assets/dash_ios_osx-dba9f15091e1130fa9336c56caa5f8066bab4717f8da17bf021ca6b34c406a33.png" for ::1 at 2017-05-10 05:37:35 -0700
+
+
+Started GET "/assets/dash_ios_framework-6782c50bc0b14ccd40dcadc0a8970ecf04cd72f31ccbeda2f96949e44067b2b9.png" for ::1 at 2017-05-10 05:37:35 -0700
+
+
+Started GET "/assets/dash_ios_app_store-27dcae2d3fa87d61425394459627989b5f2248b2fd61d0a1fb536e255110345e.png" for ::1 at 2017-05-10 05:37:35 -0700
+
+
+Started GET "/dash_job?authenticity_token=bavvphDhj1cJIA%2FF6pX9sonYuOKagr5C6Kk31ijJX0AQ598X3cPUcr8odPdad%2Bia5Vy172OrJRVmkObHLTFb%2Fw%3D%3D" for ::1 at 2017-05-10 05:37:40 -0700
+Processing by DashboardController#job as HTML
+  Parameters: {"authenticity_token"=>"bavvphDhj1cJIA/F6pX9sonYuOKagr5C6Kk31ijJX0AQ598X3cPUcr8odPdad+ia5Vy172OrJRVmkObHLTFb/w=="}
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (8.8ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_job_search-fbae33b99a83e00a98a03d672169d6e1bfb88f431710b207f5782ee85293af8a.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_job_resume-404e9b103f29f8067b962625260cc020295b2e8387ac03012b49166b7797d973.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_job_linkedin-2de58cdeb16f2d0c0a4d741096de1d275e94bdf86a9bed6c78fad93f2d0c5fad.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_job_interview-eefd1b2944f71bee6dd3b78168a121c2f959941904c178188a1074e3372bbe71.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_job_recruiting-2e271a94a9ace235d70ce96dd35ad4387719453d9bfc77889a0a8a9989481c59.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_job_networking-043e12f69e161d86359d2bd95adb4b3da3fb690668560023e2e1340679ca788a.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_job_pay-3787096761ed4ab22df0e178c7e875418afb42aa2b9c36f16d7c1a265b3cb608.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_job_portfolio-542042fd0d0d2c039096f2a8de45a88aab5594dd1b7272f6a94eebd0b7684231.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_job_imposter-27ea95c3b2b27fe495b8fc86fe9a47492c7736faa2f6d27d435857282169ea38.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_article-c87e3590af347f7d8e50e778ed7842242d4966a1fdb9aa7f08c6b5c2b135e20a.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/assets/dash_job_jobscan-a77986353ef1350f0e76c9b7d6b17dee47e044a4b3e005b4e3197bc4afcff650.png" for ::1 at 2017-05-10 05:37:40 -0700
+
+
+Started GET "/dash_links?authenticity_token=s0dfFQ%2Fk%2BLnzAc8beALOUP2UEklWiKAbsCZL0A4qnHnOC2%2BkwsajnEUJtCnI4Nt4kRAfRK%2BhO0w%2BH5rBC9KYxg%3D%3D" for ::1 at 2017-05-10 05:37:43 -0700
+Processing by DashboardController#links as HTML
+  Parameters: {"authenticity_token"=>"s0dfFQ/k+LnzAc8beALOUP2UEklWiKAbsCZL0A4qnHnOC2+kwsajnEUJtCnI4Nt4kRAfRK+hO0w+H5rBC9KYxg=="}
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (3.4ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 47ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:37:44 -0700
+
+
+Started GET "/assets/dash_links_codeeval-18848e1e69d355c9a1b0d63e3a075eb8f2c70abb024fa68d7436366ba4be0299.png" for ::1 at 2017-05-10 05:37:44 -0700
+
+
+Started GET "/assets/dash_links_exercism-1298607082a9ddfb992fa0a002edc531da408c7874f1a37f61863d3bc94e171e.png" for ::1 at 2017-05-10 05:37:44 -0700
+
+
+Started GET "/assets/dash_links_hackerrank-9be1c692e6c8329b41b239105dbbe33b8938032a2ed6bf4a778135e06606895a.png" for ::1 at 2017-05-10 05:37:44 -0700
+
+
+Started GET "/assets/dash_links_quantopian-80e37cddf450ac5c27c4b9101c789f6ce6e9491859518d3ef66afa24c4711b9d.png" for ::1 at 2017-05-10 05:37:44 -0700
+
+
+Started GET "/dash_additional_resources?authenticity_token=oXqFXcfewTt3lxCV%2BlB31wYVHejSV81WvbTaMtyWjJ%2FcNrXsCvyaHsGfa6dKsmL%2FapEQ5St%2BVgEzjQsj2W6IIA%3D%3D" for ::1 at 2017-05-10 05:37:48 -0700
+Processing by DashboardController#additional_resources as HTML
+  Parameters: {"authenticity_token"=>"oXqFXcfewTt3lxCV+lB31wYVHejSV81WvbTaMtyWjJ/cNrXsCvyaHsGfa6dKsmL/apEQ5St+VgEzjQsj2W6IIA=="}
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.1ms)
+  Rendered dashboard/_dash_job.html.erb (0.0ms)
+  Rendered dashboard/_dash_mean.html.erb (0.0ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (1.9ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:37:48 -0700
+
+
+Started GET "/assets/dash_ar_mit-2cb5362c9638ad1a50fb52fe9e671e024249125fb7b520f375b5d20fadc5f505.png" for ::1 at 2017-05-10 05:37:48 -0700
+
+
+Started GET "/dash_account_settings" for ::1 at 2017-05-10 05:37:51 -0700
+Processing by DashboardController#account_settings as HTML
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.1ms)
+  Rendered dashboard/_dash_mean.html.erb (0.1ms)
+  Rendered dashboard/_dash_python.html.erb (0.1ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:37:51 -0700
+
+
+Started GET "/dash_admin" for ::1 at 2017-05-10 05:37:52 -0700
+Processing by DashboardController#admin as HTML
+  Rendered dashboard/_dash_web.html.erb (0.0ms)
+  Rendered dashboard/_dash_ios.html.erb (0.0ms)
+  Rendered dashboard/_dash_job.html.erb (0.2ms)
+  Rendered dashboard/_dash_mean.html.erb (0.1ms)
+  Rendered dashboard/_dash_python.html.erb (0.0ms)
+  Rendered dashboard/_dash_ror.html.erb (0.0ms)
+  Rendered dashboard/_dash_links.html.erb (0.0ms)
+  Rendered dashboard/_dash_additional_resources.html.erb (0.0ms)
+  Rendered dashboard/_dash_account_settings.html.erb (0.0ms)
+  Rendered dashboard/_dash_admin.html.erb (0.0ms)
+  Rendered dashboard/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 49ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboard.scss" for ::1 at 2017-05-10 05:37:52 -0700
