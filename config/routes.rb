@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "/dash_additional_resources" => 'dashboard#additional_resources'
   get "/dash_account_settings" => 'dashboard#account_settings'
   get "/dash_admin" => 'dashboard#admin'
+  get "/dash_data_structure" => 'dashboard#data_structure'
 
   ### WEB FUNDAMENTALS ###
   get '/web_fundamentals_html' => 'web_fundamentals#html'

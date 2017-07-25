@@ -52,4 +52,9 @@ class DashboardController < ApplicationController
     @dash_additional_resources = true
     render "dashboard/index"
   end
+
+  def data_structure
+    @dash_data_structure = true
+    render "dashboard/index"
+  end
 end
