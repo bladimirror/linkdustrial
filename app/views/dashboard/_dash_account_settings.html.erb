@@ -1,5 +1,28 @@
 <% if @dash_account_settings == true %>
   <div class="w3-card-12 w3-hover-shadow box_size">
-      <h1> ACCOUNT SETTINGS </h1>
-  </div>
+	<h1> ACCOUNT SETTINGS </h1>
+	<h1 class="jumbotron01">Update User</h1>
+	<table class="table table-hover">
+		<thead class="lead">
+			<th> First Name </th>
+			<th> Last Name </th>
+			<th> Email </th>
+			<th> Password </th>
+			<th> Action </th>
+		</thead>
+		<tbody class="lead">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>
+				<form class="form-horizontal" action='/' method='post'>
+					<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+					<input name='id' type='hidden' value="index">
+					<input class="btn btn-primary" type='submit' value='Update' />
+				</form>
+			</td>
+		</tbody>
+	</table>
+	</div>
 <% end %>

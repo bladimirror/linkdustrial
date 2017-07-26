@@ -3,7 +3,7 @@
   
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="Content-Type">
-    <title> Dashboard </title>
+    <title> Linkdustrial </title>
 
     <!-- Latest compiled and minified CSS -->
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity: "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin: "anonymous" %>
@@ -18,7 +18,35 @@
 
 	<body>
     <div id="container">
-      <div class="nav_bar">
+      <div id="full_nav">
+        <div class="nav_bar">
+          <ul class="nav nav-tabs navbar-fixed-top">
+            <li role="presentation" class="active">
+              <form class="form-group-item" action='/'>
+                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                <input type="hidden" value="index">
+                <input class="list-group-item" type='submit' value="Home Page" />
+              </form>
+            </li>
+            <li role="presentation" class="active">
+              <form class="form-group-item" action='/dash_account_settings'>
+                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                <input type="hidden" value="account_settings">
+                <input class="list-group-item" type='submit' value="Account Settings" />
+              </form>
+            </li>
+            <li role="presentation" class="active">
+              <form class="form-group-item" action='/dash_admin'>
+                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                <input type="hidden" value="dash_admin">
+                <input class="list-group-item" type='submit' value="Browse" />
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="hidden_hamburger" class="nav_bar">
         <ul class="nav nav-tabs navbar-fixed-top">
           <li>
             <button class="button-slidetoggle">
@@ -29,109 +57,34 @@
               </div>
             </button>
           </li>
-          <li role="presentation" class="active"><a href="/">Dashboard</a></li>
-          <li role="presentation" class="active"><a href="/dash_account_settings">Account Settings</a></li>
-          <li role="presentation" class="active"><a href="/dash_admin">Admin</a></li>
+          <li>
+            <h1> LINKDUSTRIAL </h1>
+          </li>
         </ul>
-      </div>
-
-      <div class="sidebar">
-        <form class="form-group-item" action='/dash_web'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="dash_web">
-          <input class="list-group-item" type='submit' value="Web Fundamentals" />
-        </form>
-        <form class="form-group-item" action='/dash_python'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="dash_python">
-          <input class="list-group-item" type='submit' value="Python" />
-        </form>
-        <form class="form-group-item" action='/dash_ror'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="dash_ror">
-          <input class="list-group-item" type='submit' value="Ruby on Rails" />
-        </form>
-        <form class="form-group-item" action='/dash_mean'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="dash_mean">
-          <input class="list-group-item" type='submit' value="Mean" />
-        </form>
-        <form class="form-group-item" action='/dash_ios'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="dash_ios">
-          <input class="list-group-item" type='submit' value="iOS" />
-        </form>
-        <form class="form-group-item" action='/dash_job'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="dash_job">
-          <input class="list-group-item" type='submit' value="Job Hunting" />
-        </form>
-        <form class="form-group-item" action='/dash_links'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="dash_links">
-          <input class="list-group-item" type='submit' value="Useful Links" />
-        </form>
-        <form class="form-group-item" action='/dash_additional_resources'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="dash_additional_resources">
-          <input class="list-group-item" type='submit' value="Additional Resources" />
-        </form>
-      </div>
-      <div class="hidden_container" onclick="hidden_menu(this)">
-        <div class="sidebar_rwd">
-          <form class="form-group-item" action='/dash_web'>
-            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-            <input type="hidden" value="dash_web">
-            <input class="list-group-item" type='submit' value="Web Fundamentals" />
-          </form>
-          <form class="form-group-item" action='/dash_python'>
-            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-            <input type="hidden" value="dash_python">
-            <input class="list-group-item" type='submit' value="Python" />
-          </form>
-          <form class="form-group-item" action='/dash_ror'>
-            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-            <input type="hidden" value="dash_ror">
-            <input class="list-group-item" type='submit' value="Ruby on Rails" />
-          </form>
-          <form class="form-group-item" action='/dash_mean'>
-            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-            <input type="hidden" value="dash_mean">
-            <input class="list-group-item" type='submit' value="Mean" />
-          </form>
-          <form class="form-group-item" action='/dash_ios'>
-            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-            <input type="hidden" value="dash_ios">
-            <input class="list-group-item" type='submit' value="iOS" />
-          </form>
-          <form class="form-group-item" action='/dash_job'>
-            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-            <input type="hidden" value="dash_job">
-            <input class="list-group-item" type='submit' value="Job Hunting" />
-          </form>
-          <form class="form-group-item" action='/dash_links'>
-            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-            <input type="hidden" value="dash_links">
-            <input class="list-group-item" type='submit' value="Useful Links" />
-          </form>
-          <form class="form-group-item" action='/dash_additional_resources'>
-            <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-            <input type="hidden" value="dash_additional_resources">
-            <input class="list-group-item" type='submit' value="Additional Resources" />
-          </form>
+        <div class="hidden_container" onclick="hidden_menu(this)">
+          <div class="sidebar_rwd">
+            <form class="form-group-item" action='/'>
+              <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+              <input type="hidden" value="index">
+              <input class="list-group-item" type='submit' value="Dashboard" />
+            </form>
+            <form class="form-group-item" action='/dash_account_settings'>
+              <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+              <input type="hidden" value="account_settings">
+              <input class="list-group-item" type='submit' value="Account Settings" />
+            </form>
+            <form class="form-group-item" action='/dash_admin'>
+              <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+              <input type="hidden" value="dash_admin">
+              <input class="list-group-item" type='submit' value="Browse" />
+            </form>
+          </div>
         </div>
       </div>
 
       <div class="soup_content">
+        <input id="pac-input" class="controls w3-hover-shadow" type="text" placeholder="Search Box">
         <div class="w3-container">
-          <%= render(:partial => "dash_web") %>
-          <%= render(:partial => "dash_ios") %>
-          <%= render(:partial => "dash_job") %>
-          <%= render(:partial => "dash_mean") %>
-          <%= render(:partial => "dash_python") %>
-          <%= render(:partial => "dash_ror") %>
-          <%= render(:partial => "dash_links") %>
-          <%= render(:partial => "dash_additional_resources") %>
           <%= render(:partial => "dash_account_settings") %>
           <%= render(:partial => "dash_admin") %>
         </div>    
@@ -139,16 +92,20 @@
 	</body>
 
 <script type="text/javascript">
-  function hidden_menu(x) {
-    x.classList.toggle("change");
-  };
+  //HIDDEN MENU SCRIPT
+    function hidden_menu(x) {
+      x.classList.toggle("change");
+    };
 
-  $(document).ready(function(){
-    $('.button-slidetoggle').click(function() {
-      $('.hidden_container').toggle("slide");
+    $(document).ready(function(){
+      $('.button-slidetoggle').click(function() {
+        $('.hidden_container').toggle("slide");
+      });
     });
-  });
 </script>
+
+//GOOGLE SEARCH BOX
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnNcc6jlGUp04fpUsKCXzCsq0XR5qphdw&libraries=places&callback=initAutocomplete" async defer></script>
 
 </html>
 

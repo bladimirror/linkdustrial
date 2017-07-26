@@ -10,10 +10,9 @@
 
 //BODY - MASTER CONTAINER
 #container {
-	min-width: 32em;
-	max-width: 100%;
+	width: 100%;
 	height: auto;
-	margin: 0.25em 0.25em 0.25em 0.25em;
+	margin: 0em 0em 0em 0em;
 	vertical-align: middle;
 	display: block;
 	overflow: auto;
@@ -26,9 +25,11 @@
 		width: 100%;
 		height: auto;
 		margin: 0em 0.625em 0em 0.625em;
+		top: 0em;
 		vertical-align: left;
 		display: block;
-		overflow: auto;
+		overflow: hidden;
+		position: fixed;
 		background-color: #fff;
 	}
 
@@ -68,13 +69,14 @@
 	}
 
 	.soup_content {
-		width: 75%;
+		min-width: 15em;
+		max-width: 100%;
 		height: auto;
-		margin: 0.625em 0.625em 0.625em 0.625em;
+		margin: 0 auto;
 		padding: 4em 1em 1em 1em;
 		vertical-align: middle;
 		display: inline-block;
-		position: relative;
+		position: absolute;
 		overflow: auto;
 		background-color: #fff;
 		border-radius: 0.250em;
@@ -84,10 +86,9 @@
 	}
 
 //////BODY - SIDEBAR
-	@media screen and (max-width: 350em) and (min-width: 31.250em) {
+	@media (max-width: 350em) and (min-width: 30.99em) {
 		.sidebar {
-			min-width: 12.5em;
-			max-width: 100%;
+			width: 12.5em;
 			height: auto;
 			margin: 3.5em 0.625em 0.5em 0.625em;
 			padding: 0.25em 0.25em 0.25em 0.25em;
@@ -98,6 +99,9 @@
 			background-color: #fff;
 		}
 		.hidden_container {
+			display: none;
+		}
+		#hidden_hamburger {
 			display: none;
 		}
 
@@ -118,9 +122,9 @@
 	}
 
 //////HAMBURGER MENU
-	@media screen and (max-width: 30em) and (min-width: 0em) {
+	@media only screen and (max-width: 30.98em) and (min-width: 0em) {
     	
-    	li.active {
+    	#full_nav {
     		display: none;
     	}
 
@@ -174,6 +178,7 @@
 			position: relative;
 			overflow: auto;
 			background-color: #fff;
+    		//z-index: 2;
 		}
 
 		input {
@@ -189,5 +194,15 @@
 		input:hover {
 			box-shadow: 0em 0em 1.25em rgba(96, 103, 123, 0.34);
 			border: 0em none rgba(96, 103, 123, 0.34);
+		}
+
+		.controls {
+			margin: 0 auto;
+			vertical-align: middle;
+			display: block;
+			position: relative;
+			overflow: auto;
+			border-radius: 0.250em;
+			border-style: inset;
 		}
 	}
