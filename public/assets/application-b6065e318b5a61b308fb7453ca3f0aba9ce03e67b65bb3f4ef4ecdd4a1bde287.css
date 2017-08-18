@@ -1,0 +1,336 @@
+/* line 6, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+* {
+  margin: 0em;
+  padding: 0em;
+}
+
+/* line 12, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+#container {
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  z-index: -4;
+  overflow: auto;
+  background-color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* line 24, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+.nav {
+  width: 100%;
+  height: 3.750em;
+  background-color: blue;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+/* line 35, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+.search_box {
+  width: 100%;
+  height: 2.25em;
+  display: block;
+  margin: 3.750em 0em 0em 0em;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+/* line 44, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+.navbar_logo {
+  max-width: 15em;
+  height: 2.5em;
+  margin: 1em 0.25em 1em 1em;
+}
+
+/* line 50, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+li:hover {
+  box-shadow: 0em 0em 1.25em rgba(61, 61, 61, 0.77);
+  cursor: crosshair;
+}
+
+/* line 56, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+.box_size {
+  width: 15em;
+  height: 17em;
+  margin: 1em 0.625em 1em 0.625em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  vertical-align: bottom;
+  display: inline-block;
+  position: relative;
+  overflow: auto;
+  background-color: #ffffff;
+}
+
+/* line 68, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+p {
+  text-align: center;
+  position: absolute;
+  bottom: 0em;
+}
+
+/* line 74, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+.dashimg {
+  width: 12em;
+  height: 12em;
+  margin: 1em 1em 1em 1em;
+  padding: 0.25em 0.25em 0.25em 0.25em;
+  vertical-align: top;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  overflow: auto;
+}
+
+@media (max-width: 350em) and (min-width: 63.188em) {
+  /* line 88, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .soup_content {
+    min-width: 20em;
+    max-width: 87.5em;
+    height: 77em;
+    margin: 0.625em 0.25em 0em 12.5em;
+    background-color: purple;
+    display: inline-block;
+    position: static;
+    z-index: 1;
+    padding: 1em 1em 1em 1em;
+    overflow: auto;
+    background-color: #ffffff;
+    border-radius: 0.250em;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+  }
+
+  /* line 107, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .sidebar {
+    width: 12.5em;
+    min-height: 35.5em;
+    max-height: 77em;
+    margin: 0.625em 0em 0em 0em;
+    background-color: orange;
+    display: inline-block;
+    position: fixed;
+    z-index: 1;
+    vertical-align: top;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    overflow: auto;
+    border-style: solid;
+    border-color: #dcdcdc;
+    background-color: #ffffff;
+  }
+
+  /* line 123, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .hidden_container {
+    display: none;
+  }
+
+  /* line 126, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  #hidden_hamburger {
+    display: none;
+  }
+
+  /* line 130, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  input {
+    min-width: 12em;
+    max-width: 100%;
+    border: none;
+    padding: 1em 2em 1em 2em;
+    text-decoration: none;
+    margin: 0.250em 0.125em 0.250em 0.125em;
+    cursor: pointer;
+  }
+
+  /* line 140, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  input:hover {
+    box-shadow: 0em 0em 1.25em rgba(96, 103, 123, 0.34);
+    border: 0em none rgba(96, 103, 123, 0.34);
+  }
+}
+@media only screen and (max-width: 63.125em) and (min-width: 0em) {
+  /* line 148, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  #full_nav {
+    display: none;
+  }
+
+  /* line 152, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .navbar_mobile_logo {
+    max-width: 15em;
+    height: 2.5em;
+    margin: 0.25em 0em 0em 4em;
+  }
+
+  /* line 158, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .hamburger_menu {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0em 0em 0.250em 0em;
+    margin: 0.250em 0.250em 0.250em 0.250em;
+  }
+
+  /* line 165, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .bar1, .bar2, .bar3 {
+    width: 2.188em;
+    height: 0.313em;
+    background-color: #333;
+    margin: 0.375em 0em;
+    transition: 0.4s;
+  }
+
+  /* Rotate first bar */
+  /* line 174, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  /* Fade out the second bar */
+  /* line 180, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  /* Rotate last bar */
+  /* line 185, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  /* line 191, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .sidebar {
+    display: none;
+  }
+
+  /* line 194, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .hidden_container {
+    display: none;
+  }
+
+  /* line 197, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .sidebar_rwd {
+    width: 12.5em;
+    min-height: 35.5em;
+    max-height: 77em;
+    margin: 0.625em 0em 0em 0em;
+    background-color: orange;
+    display: inline-block;
+    position: fixed;
+    z-index: 1;
+    vertical-align: top;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    overflow: auto;
+    border-style: solid;
+    border-color: #dcdcdc;
+    background-color: #ffffff;
+  }
+
+  /* line 215, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .soup_content {
+    width: 100%;
+    height: 77em;
+    margin: 0.625em 0em 0em 0em;
+    background-color: purple;
+    display: inline-block;
+    position: static;
+    z-index: 1;
+    padding: 1em 1em 1em 1em;
+    overflow: auto;
+    background-color: #ffffff;
+    border-radius: 0.250em;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+  }
+
+  /* line 233, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  input {
+    min-width: 12em;
+    max-width: 100%;
+    border: none;
+    padding: 1em 2em 1em 2em;
+    text-decoration: none;
+    margin: 0.250em 0.125em 0.250em 0.125em;
+    cursor: pointer;
+  }
+
+  /* line 243, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  input:hover {
+    box-shadow: 0em 0em 1.25em rgba(96, 103, 123, 0.34);
+    border: 0em none rgba(96, 103, 123, 0.34);
+  }
+
+  /* line 248, /Users/Bladmirror/Desktop/Coding/git_repo/linkdustrial/app/assets/stylesheets/dashboard.scss */
+  .controls {
+    margin: 0 auto;
+    vertical-align: middle;
+    display: block;
+    position: relative;
+    overflow: auto;
+    border-radius: 0.250em;
+    border-style: inset;
+  }
+}
+//GENERAL HTML CSS
+* {
+	margin: 0em;
+	padding: 0em;
+}
+
+#new_container {
+	width: 100%;
+	height: 100%;
+	background-color: green;
+	position: absolute;
+	z-index: -4;
+}
+
+.new_nav {
+	width: 100%;
+	height: 3.750em;
+	background-color: blue;
+	display: block;
+	position: fixed;
+	z-index: 1;
+}
+
+.new_sidebar {
+	width: 12.5em;
+	min-height: 35.5em;
+	max-height: 77em;
+	margin: 3.750em 0em 0em 0em;
+	background-color: orange;
+	display: inline-block;
+	position: fixed;
+	z-index: 1;
+	vertical-align: top;
+}
+
+.new_content {
+	min-width: 20em;
+	max-width: 87.5em;
+	height: 77em;
+	margin: 0em 0em 0em 12.5em;
+	background-color: purple;
+	display: inline-block;
+	position: static;
+	z-index: 1;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

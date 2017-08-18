@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 #Rails.application.config.assets.precompile += %w( test_max-640px_40em_Mobile.scss )
 #Rails.application.config.assets.precompile += %w( test_min-1336px_83em_Desktop.scss )
 #Rails.application.config.assets.precompile += %w( custom.js )
+Rails.application.config.assets.precompile += %w( new_theme.css )

@@ -11,26 +11,40 @@
 //BODY - MASTER CONTAINER
 #container {
 	width: 100%;
-	height: auto;
-	margin: 0em 0em 0em 0em;
-	vertical-align: middle;
-	display: block;
+	height: 100%;
+	background-color: green;
+	position: absolute;
+	z-index: -4;
 	overflow: auto;
-	background-color: #fff;
+	background-color: #ffffff;
 	font-family: 'Raleway', sans-serif;
 }
 	
-//////BODY - CONTENT CONTAINER
+//////BODY - NAVBAR
 	.nav {
 		width: 100%;
-		height: auto;
-		margin: 0em 0.625em 0em 0.625em;
-		top: 0em;
-		vertical-align: left;
+		height: 3.750em;
+		background-color: blue;
 		display: block;
-		overflow: hidden;
 		position: fixed;
-		background-color: #fff;
+		z-index: 1;
+		overflow: hidden;
+		background-color: #fafafa;
+	}
+
+	.search_box {
+		width: 100%;
+		height: 2.25em;
+		display: block;
+		margin: 3.750em 0em 0em 0em;
+		overflow: hidden;
+		background-color: #fafafa;
+	}
+
+	.navbar_logo {
+		max-width: 15em;
+		height: 2.5em;
+		margin: 1em 0.25em 1em 1em;
 	}
 
 	li:hover {
@@ -38,129 +52,142 @@
 		cursor: crosshair;
 	}
 
-	.box_size {
-		width: 18em;
-		height: 20em;
-		margin: 1em 0.625em 1em 0.625em;
-		padding: 0.5em 0.5em 0.5em 0.5em;
-		vertical-align: bottom;
-		display: inline-block;
-		position: relative;
-		overflow: auto;
-		background-color: #fff;
-	}
-
-	p {
-		text-align: center;
-		position : absolute;
-   		bottom : 0em;	
-	}
-
-	.dashimg {
-		width: 15em;
-		height: 15em;
-		margin: 1em 1em 1em 1em;
-		padding: 0.25em 0.25em 0.25em 0.25em;
-		vertical-align: top;
-		text-align: center;
-		display: inline-block;
-		position: relative;
-		overflow: auto;
-	}
-
-	.soup_content {
-		min-width: 15em;
-		max-width: 100%;
-		height: auto;
-		margin: 0 auto;
-		padding: 4em 1em 1em 1em;
-		vertical-align: middle;
-		display: inline-block;
-		position: absolute;
-		overflow: auto;
-		background-color: #fff;
-		border-radius: 0.250em;
-		-webkit-transition: border .2s ease-in-out;
-		   -o-transition: border .2s ease-in-out;
-		      transition: border .2s ease-in-out;
-	}
-
-//////BODY - SIDEBAR
-	@media (max-width: 350em) and (min-width: 30.99em) {
-		.sidebar {
-			width: 12.5em;
-			height: auto;
-			margin: 3.5em 0.625em 0.5em 0.625em;
-			padding: 0.25em 0.25em 0.25em 0.25em;
-			vertical-align: top;
+//////BODY - BUTTONS
+		.box_size {
+			width: 15em;
+			height: 17em;
+			margin: 1em 0.625em 1em 0.625em;
+			padding: 0.5em 0.5em 0.5em 0.5em;
+			vertical-align: bottom;
 			display: inline-block;
 			position: relative;
 			overflow: auto;
-			background-color: #fff;
-		}
-		.hidden_container {
-			display: none;
-		}
-		#hidden_hamburger {
-			display: none;
+			background-color: #ffffff;
 		}
 
-		input {
-		    min-width: 12em;
-		    max-width: 100%;
-		    border: none;
-		    padding: 1em 2em 1em 2em;
-		    text-decoration: none;
-		    margin: 0.250em 0.125em 0.250em 0.125em;
-		    cursor: pointer;
+		p {
+			text-align: center;
+			position : absolute;
+	   		bottom : 0em;	
 		}
 
-		input:hover {
-			box-shadow: 0em 0em 1.25em rgba(96, 103, 123, 0.34);
-			border: 0em none rgba(96, 103, 123, 0.34);
-		}
-	}
-
-//////HAMBURGER MENU
-	@media only screen and (max-width: 30.98em) and (min-width: 0em) {
-    	
-    	#full_nav {
-    		display: none;
-    	}
-
-		.hamburger_menu {
-		    display: inline-block;
-		    cursor: pointer;
-		    padding: 0em 0em 0.250em 0em;
-		    margin: 0.250em 0.250em 0.250em 0.250em;
+		.dashimg {
+			width: 12em;
+			height: 12em;
+			margin: 1em 1em 1em 1em;
+			padding: 0.25em 0.25em 0.25em 0.25em;
+			vertical-align: top;
+			text-align: center;
+			display: inline-block;
+			position: relative;
+			overflow: auto;
 		}
 
-		.bar1, .bar2, .bar3 {
-		    width: 2.188em;
-		    height: 0.313em;
-		    background-color: #333;
-		    margin: 0.375em 0em;
-		    transition: 0.4s;
+@media (max-width: 350em) and (min-width: 63.188em) {
+	//////BODY - CONTENT CONTAINER
+		.soup_content {
+			min-width: 20em;
+			max-width: 87.5em;
+			height: 77em;
+			margin: 0.625em 0.25em 0em 12.5em;
+			background-color: purple;
+			display: inline-block;
+			position: static;
+			z-index: 1;
+			padding: 1em 1em 1em 1em;
+			overflow: auto;
+			background-color: #ffffff;
+			border-radius: 0.250em;
+			-webkit-transition: border .2s ease-in-out;
+			   -o-transition: border .2s ease-in-out;
+			      transition: border .2s ease-in-out;
 		}
 
-		/* Rotate first bar */
-		.change .bar1 {
-		    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-		    transform: rotate(-45deg) translate(-9px, 6px) ;
+	//////BODY - SIDEBAR
+			.sidebar {
+				width: 12.5em;
+				min-height: 35.5em;
+				max-height: 77em;
+				margin: 0.625em 0em 0em 0em;
+				background-color: orange;
+				display: inline-block;
+				position: fixed;
+				z-index: 1;
+				vertical-align: top;
+				padding: 0.25em 0.25em 0.25em 0.25em;
+				overflow: auto;
+				border-style: solid;
+				border-color: #dcdcdc;
+				background-color: #ffffff;
+			}
+			.hidden_container {
+				display: none;
+			}
+			#hidden_hamburger {
+				display: none;
+			}
+
+			input {
+			    min-width: 12em;
+			    max-width: 100%;
+			    border: none;
+			    padding: 1em 2em 1em 2em;
+			    text-decoration: none;
+			    margin: 0.250em 0.125em 0.250em 0.125em;
+			    cursor: pointer;
+			}
+
+			input:hover {
+				box-shadow: 0em 0em 1.25em rgba(96, 103, 123, 0.34);
+				border: 0em none rgba(96, 103, 123, 0.34);
+			}
 		}
 
-		/* Fade out the second bar */
-		.change .bar2 {
-		    opacity: 0;
-		}
+@media only screen and (max-width: 63.125em) and (min-width: 0em) {
+	//////HAMBURGER MENU
+	    	#full_nav {
+	    		display: none;
+	    	}
 
-		/* Rotate last bar */
-		.change .bar3 {
-		    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-		    transform: rotate(45deg) translate(-8px, -8px) ;
-		}
+	    	.navbar_mobile_logo{
+	    		max-width: 15em;
+	    		height: 2.5em;
+	    		margin: 0.25em 0em 0em 4em;
+	    	}
 
-		//////BODY - SIDEBAR
+			.hamburger_menu {
+			    display: inline-block;
+			    cursor: pointer;
+			    padding: 0em 0em 0.250em 0em;
+			    margin: 0.250em 0.250em 0.250em 0.250em;
+			}
+
+			.bar1, .bar2, .bar3 {
+			    width: 2.188em;
+			    height: 0.313em;
+			    background-color: #333;
+			    margin: 0.375em 0em;
+			    transition: 0.4s;
+			}
+
+			/* Rotate first bar */
+			.change .bar1 {
+			    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+			    transform: rotate(-45deg) translate(-9px, 6px) ;
+			}
+
+			/* Fade out the second bar */
+			.change .bar2 {
+			    opacity: 0;
+			}
+
+			/* Rotate last bar */
+			.change .bar3 {
+			    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+			    transform: rotate(45deg) translate(-8px, -8px) ;
+			}
+
+	//////BODY - SIDEBAR
 		.sidebar {
 			display: none;
 		}
@@ -168,19 +195,41 @@
 			display: none;
 		}
 		.sidebar_rwd {
-			min-width: 12.5em;
-			max-width: 100%;
-			height: auto;
-			margin: 3.5em 0.625em 0.5em 0.625em;
-			padding: 0.25em 0.25em 0.25em 0.25em;
-			vertical-align: top;
+			width: 12.5em;
+			min-height: 35.5em;
+			max-height: 77em;
+			margin: 0.625em 0em 0em 0em;
+			background-color: orange;
 			display: inline-block;
-			position: relative;
+			position: fixed;
+			z-index: 1;
+			vertical-align: top;
+			padding: 0.25em 0.25em 0.25em 0.25em;
 			overflow: auto;
-			background-color: #fff;
-    		//z-index: 2;
+			border-style: solid;
+			border-color: #dcdcdc;
+			background-color: #ffffff;
 		}
 
+	//////BODY - CONTENT CONTAINER
+		.soup_content {
+			width: 100%;
+			height: 77em;
+			margin: 0.625em 0em 0em 0em;
+			background-color: purple;
+			display: inline-block;
+			position: static;
+			z-index: 1;
+			padding: 1em 1em 1em 1em;
+			overflow: auto;
+			background-color: #ffffff;
+			border-radius: 0.250em;
+			-webkit-transition: border .2s ease-in-out;
+			   -o-transition: border .2s ease-in-out;
+			      transition: border .2s ease-in-out;
+		}
+
+	//////BODY - OTHER
 		input {
 		    min-width: 12em;
 		    max-width: 100%;
@@ -205,4 +254,4 @@
 			border-radius: 0.250em;
 			border-style: inset;
 		}
-	}
+}

@@ -13,14 +13,20 @@
     <%= stylesheet_link_tag "https://www.w3schools.com/lib/w3.css" %>
     <!--GOOGLE FONTS CSS-->
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Raleway" %>
+    <!--CSS File -->
+    <%= stylesheet_link_tag "dashboard.scss" %>
   </head>
 
 
 	<body>
     <div id="container">
+<!-- DESKTOP HEADER CONTENT -->
       <div id="full_nav">
         <div class="nav_bar">
           <ul class="nav nav-tabs navbar-fixed-top">
+            <li role="presentation" class="active">
+              <%= image_tag("logo.png", class:"navbar_logo") %>
+            </li>
             <li role="presentation" class="active">
               <form class="form-group-item" action='/'>
                 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
@@ -36,7 +42,7 @@
               </form>
             </li>
             <li role="presentation" class="active">
-              <form class="form-group-item" action='/dash_admin'>
+              <form class="form-group-item" action='/dash_browse'>
                 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
                 <input type="hidden" value="dash_admin">
                 <input class="list-group-item" type='submit' value="Browse" />
@@ -46,6 +52,44 @@
         </div>
       </div>
 
+      <div class="search_box">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-addon" id="basic-addon2">Search</span>
+        </div>
+      </div>
+
+<!--DESKTOP CONTENT -->
+      <div class="sidebar">
+        <form class="form-group-item" action='/'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" value="index">
+          <input class="list-group-item" type='submit' value="Dashboard" />
+        </form>
+        <form class="form-group-item" action='/dash_account_settings'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" value="account_settings">
+          <input class="list-group-item" type='submit' value="Account Settings" />
+        </form>
+        <form class="form-group-item" action='/dash_browse'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" value="dash_admin">
+          <input class="list-group-item" type='submit' value="Browse" />
+        </form>
+        <form class="form-group-item" action='/dash_user_profile'>
+          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <input type="hidden" value="dash_admin">
+          <input class="list-group-item" type='submit' value="Profile" />
+        </form>
+      </div>
+
+      <div class="soup_content">
+        <%= render(:partial => "dash_account_settings") %>
+        <%= render(:partial => "dash_browse") %>
+        <%= render(:partial => "dash_user_profile") %> 
+      </div>
+
+<!-- MOBILE HEADER CONTENT -->
       <div id="hidden_hamburger" class="nav_bar">
         <ul class="nav nav-tabs navbar-fixed-top">
           <li>
@@ -58,9 +102,9 @@
             </button>
           </li>
           <li>
-            <h1> LINKDUSTRIAL </h1>
-          </li>
+            <%= image_tag("logo.png", class:"navbar_mobile_logo") %>
         </ul>
+<!-- MOBILE SIDEBAR CONTENT -->
         <div class="hidden_container" onclick="hidden_menu(this)">
           <div class="sidebar_rwd">
             <form class="form-group-item" action='/'>
@@ -73,24 +117,22 @@
               <input type="hidden" value="account_settings">
               <input class="list-group-item" type='submit' value="Account Settings" />
             </form>
-            <form class="form-group-item" action='/dash_admin'>
+            <form class="form-group-item" action='/dash_browse'>
               <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
               <input type="hidden" value="dash_admin">
               <input class="list-group-item" type='submit' value="Browse" />
             </form>
+            <form class="form-group-item" action='/dash_user_profile'>
+              <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+              <input type="hidden" value="dash_admin">
+              <input class="list-group-item" type='submit' value="Profile" />
+            </form>
           </div>
         </div>
       </div>
-
-      <div class="soup_content">
-        <input id="pac-input" class="controls w3-hover-shadow" type="text" placeholder="Search Box">
-        <div class="w3-container">
-          <%= render(:partial => "dash_account_settings") %>
-          <%= render(:partial => "dash_admin") %>
-        </div>    
-    </div>
 	</body>
 
+<!-- SCRIPT(s) -->
 <script type="text/javascript">
   //HIDDEN MENU SCRIPT
     function hidden_menu(x) {
@@ -104,7 +146,7 @@
     });
 </script>
 
-//GOOGLE SEARCH BOX
+<!--GOOGLE SEARCH BOX-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnNcc6jlGUp04fpUsKCXzCsq0XR5qphdw&libraries=places&callback=initAutocomplete" async defer></script>
 
 </html>
