@@ -3,7 +3,8 @@
   
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="Content-Type">
-    <title> Linkdustrial </title>
+    <title>Linkdustrial</title>
+    <link rel="icon" href="/assets/title_logo.png" type="image/ico" />
 
     <!-- Latest compiled and minified CSS -->
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity: "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin: "anonymous" %>
@@ -31,7 +32,7 @@
               <form class="form-group-item" action='/'>
                 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
                 <input type="hidden" value="index">
-                <input class="list-group-item" type='submit' value="Home Page" />
+                <input class="list-group-item" type='submit' value="Dashboard" />
               </form>
             </li>
             <li role="presentation" class="active">
@@ -48,45 +49,22 @@
                 <input class="list-group-item" type='submit' value="Browse" />
               </form>
             </li>
+            <li role="presentation" class="active">
+              <form class="form-group-item" action='/dash_user_profile'>
+                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                <input type="hidden" value="dash_admin">
+                <input class="list-group-item" type='submit' value="Profile" />
+              </form>
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="search_box">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <input type="text" class="form-control">
           <span class="input-group-addon" id="basic-addon2">Search</span>
         </div>
-      </div>
-
-<!--DESKTOP CONTENT -->
-      <div class="sidebar">
-        <form class="form-group-item" action='/'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="index">
-          <input class="list-group-item" type='submit' value="Dashboard" />
-        </form>
-        <form class="form-group-item" action='/dash_account_settings'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="account_settings">
-          <input class="list-group-item" type='submit' value="Account Settings" />
-        </form>
-        <form class="form-group-item" action='/dash_browse'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="dash_admin">
-          <input class="list-group-item" type='submit' value="Browse" />
-        </form>
-        <form class="form-group-item" action='/dash_user_profile'>
-          <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-          <input type="hidden" value="dash_admin">
-          <input class="list-group-item" type='submit' value="Profile" />
-        </form>
-      </div>
-
-      <div class="soup_content">
-        <%= render(:partial => "dash_account_settings") %>
-        <%= render(:partial => "dash_browse") %>
-        <%= render(:partial => "dash_user_profile") %> 
       </div>
 
 <!-- MOBILE HEADER CONTENT -->
@@ -104,6 +82,7 @@
           <li>
             <%= image_tag("logo.png", class:"navbar_mobile_logo") %>
         </ul>
+
 <!-- MOBILE SIDEBAR CONTENT -->
         <div class="hidden_container" onclick="hidden_menu(this)">
           <div class="sidebar_rwd">
@@ -130,6 +109,14 @@
           </div>
         </div>
       </div>
+
+<!--DESKTOP CONTENT -->
+      <div class="soup_content">
+        <%= render(:partial => "dash_account_settings") %>
+        <%= render(:partial => "dash_browse") %>
+        <%= render(:partial => "dash_user_profile") %> 
+      </div>
+    </div>
 	</body>
 
 <!-- SCRIPT(s) -->
@@ -145,9 +132,6 @@
       });
     });
 </script>
-
-<!--GOOGLE SEARCH BOX-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnNcc6jlGUp04fpUsKCXzCsq0XR5qphdw&libraries=places&callback=initAutocomplete" async defer></script>
 
 </html>
 
